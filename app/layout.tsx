@@ -3,7 +3,6 @@ import { Inter } from 'next/font/google';
 
 import ThemeProvider from '@/components/theme-provider';
 import Header from '@/components/layouts/Header';
-import QueryProvider from '@/components/query-provider';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -21,12 +20,10 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="dark">
-          {/* <QueryProvider> */}
-          <main className="flex min-h-screen flex-col items-center m-24">
-            <Header className=" mb-16" />
+          <main className="flex flex-col items-center m-6 md:m-12 lg:m-24">
+            <Header />
             {children}
           </main>
-          {/* </QueryProvider> */}
         </ThemeProvider>
       </body>
     </html>

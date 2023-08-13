@@ -1,16 +1,14 @@
 import PokemonGrid from '@/components/pokemon-grid';
 import { getPokemonList } from '@/lib/pokemonAPI';
 
-// add tanstack query
-// fix pokemon types everywhere
-// pokemon names to lower case
-// error handler for api requests
-// add back button
-// add refresh button if its error
-// adaptive
 // image fill
+// adaptive
+// add refresh button if its error
 // eslint
 // theme error
+// favicon in Next.js
+// fix pokemon types everywhere
+// suspense / loading
 
 export default async function Home() {
   const pokemonList = await getPokemonList();

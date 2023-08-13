@@ -23,8 +23,8 @@ export default function PokemonGrid({ pokemonList }: Props) {
 
   return (
     <div className="flex flex-col">
-      <div className=" mx-auto inline-block">
-        <h3 className="text-2xl py-6">Search For Your Pokemon!</h3>
+      <div className=" mx-auto inline-block mb-8 md:mb-12 md:mt-3 lg:mt-0">
+        <h3 className=" text-xl md:text-2xl py-6">Search For Your Pokemon!</h3>
         <Label htmlFor="pokemonName" className=" inline-block mb-1.5">
           Pokemon Name
         </Label>
@@ -37,9 +37,9 @@ export default function PokemonGrid({ pokemonList }: Props) {
           onChange={(e) => setSearchText(e.target.value)}
         />
       </div>
-      <h3 className="text-3xl pt-12 pb-6 text-center">Pokemon Collection</h3>
+      <h3 className="text-3xl md:mb-6 text-center">Pokemon Collection</h3>
 
-      <div className="grid lg:grid-cols-3">
+      <div className="grid md:grid-cols-3">
         {filteredPokemonList.map((pokemon: Pokemon, i: number) => {
           return <PokemonCard name={pokemon.name.toLowerCase()} key={i} />;
         })}
