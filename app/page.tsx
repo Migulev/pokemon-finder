@@ -8,6 +8,7 @@ export default async function Home() {
     return <span>Error</span>;
   }
 
+  //
   return (
     <section>
       <PokemonGrid pokemonList={pokemonList} />
